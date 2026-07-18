@@ -20,6 +20,7 @@ Do not introduce a new framework, library, architectural pattern, or naming conv
 - Choose classes, records, structs, record structs, and interfaces according to their semantics.
 - Use records when value-based equality and immutable data-oriented behavior are appropriate.
 - Use records for Data Transfer Objects but not for Domain Aggregates or Entities.
+- Use TimeProvider when DateTime requires testing. Always use UtcNow
 
 
 ## Architecture and Project Structure
