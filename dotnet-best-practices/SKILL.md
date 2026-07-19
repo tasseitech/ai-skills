@@ -36,7 +36,9 @@ Do not introduce a new framework, library, architectural pattern, or naming conv
 - Custom rules:
 - Use Clean Code Architecture with Apps, Core, Infrastructure, Tests folder structure.
 - The folder Core includes Domain, Services, Consumers and Abstractions Projects. E.g. {Project}.{Domain}.Core.Domain. Service Project includes both Service Abstractions and Implementations.
-- The folder Infrastructure includes all third party implementations such as {Project}.{Domain}.Infrastructure.MongoDb or {Project}.{Domain}.Infrastructure.ThirdParty
+- The folder Infrastructure includes all third party implementations such as {Project}.{Domain}.Infrastructure.MongoDb or {Project}.{Domain}.Infrastructure.ThirdParty.
+- Do not check for ArgumentNullException with every method, assume that the developer knows what he is doing.
+- Avoid creating custom exceptions and instead favour an ErrorCode approach. 
 
 ## Dependency Injection
 
@@ -63,7 +65,7 @@ Do not introduce a new framework, library, architectural pattern, or naming conv
 
 - Ensure that new code is thoroughly tested and enough tests are created.
 - Use xUnit framework with FluentAssertions for assertions
-- Follow AAA pattern (Arrange, Act, Assert)
+- Follow AAA pattern (Arrange, Act, Assert). Group the code by these pattern and write a comment for each section e.g. // Arrange, // Act, // Assert
 - Use Moq for mocking dependencies
 - Test observable behavior rather than implementation details.
 - Test both success and failure scenarios
