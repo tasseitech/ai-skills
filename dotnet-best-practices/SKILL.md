@@ -22,6 +22,7 @@ Do not introduce a new framework, library, architectural pattern, or naming conv
 - Use records when value-based equality and immutable data-oriented behavior are appropriate.
 - Use records for Data Transfer Objects but not for Domain Aggregates or Entities.
 - Use TimeProvider when DateTime requires testing. Always use UtcNow
+- Avoid using private methods that wraps another method for just one parameter. Only use it when it is really necessary
 
 
 ## Architecture and Project Structure
